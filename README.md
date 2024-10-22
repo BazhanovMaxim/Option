@@ -15,7 +15,7 @@
 public static void main(String[] args) {
     Option.of("   Hello world   ")
             .apply(System.out::println)
-            .map(String::trim)
+            .map(String::toUpperCase)
             .apply(System.out::println);
 }
 ```
@@ -31,7 +31,7 @@ HELLO WORLD
 public static void main(String[] args) {
     Option.of("   Hello world   ")
             .apply(System.out::println)
-            .map(String::trim)
+            .map(String::toUpperCase)
             .and(() -> System.out.println("Результат нового значения:"))
             .apply(System.out::println);
 }
